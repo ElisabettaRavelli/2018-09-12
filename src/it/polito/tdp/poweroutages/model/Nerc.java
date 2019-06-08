@@ -3,10 +3,20 @@ package it.polito.tdp.poweroutages.model;
 public class Nerc {
 	private int id;
 	private String value;
+	private Boolean staPrestando; //tiene traccia del fatto che stia prestando o meno energia a qualcuno
 
 	public Nerc(int id, String value) {
 		this.id = id;
 		this.value = value;
+		this.staPrestando = false;
+	}
+	
+	public Boolean getStaPrestando() {
+		return staPrestando;
+	}
+
+	public void setStaPrestando(Boolean staPrestando) {
+		this.staPrestando = staPrestando;
 	}
 
 	public int getId() {
